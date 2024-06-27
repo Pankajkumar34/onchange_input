@@ -1,6 +1,6 @@
 {
   "name": "onchangeinput",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Onchange Input",
   "main": "index.js",
   "type": "module",
@@ -12,9 +12,7 @@
   ],
   "author": "Pankaj Kumar",
   "license": "ISC",
-  "dependencies": {
-   
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.3.3"
   }
