@@ -39,7 +39,7 @@ const OnChangeInput = (initialState, validationRules = {}) => {
         setErrors((prev)=>({...errors,[name]: `Exceeds maximum length of ${maxLength} characters`}))
         
       } else {
-        
+        setErrors((prev)=>({...errors,[name]:""}))
       }
     }
     setValues({ ...values, [name]: value });
