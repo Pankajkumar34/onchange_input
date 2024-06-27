@@ -43,7 +43,6 @@ const OnChangeInput = (initialState, validationRules = {}) => {
       }
     }
     setValues({ ...values, [name]: value });
-
   };
 
 

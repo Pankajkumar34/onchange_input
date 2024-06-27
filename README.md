@@ -16,8 +16,7 @@ To install `onchangeinput`, use npm:
 
 ## Examples 
 
-import React from "react"
-import OnChangeInput from 'onchangeinput';
+
 ```bash
   const validationRules = {
     email: {
@@ -31,20 +30,8 @@ import OnChangeInput from 'onchangeinput';
     },
   };
   ```
-```bash
-function App() {
-
-  // Initialize the custom hook to manage form state and validation //
-
-  const { values, errors, handleChange, resetForm, setErrors } = OnChangeInput(
-    {
-      fname: "",
-      email: "",
-    },
-    validationRules
-  );
-
-  // Function to get empty fields from the form
+  ```bash
+    // Function to get empty fields from the form
 
   const getEmptyFields = (values) => {
     const emptyFields = [];
@@ -56,25 +43,36 @@ function App() {
     }
     return emptyFields;
   };
+  ```
+```bash
+import React from "react"
+import OnChangeInput from 'onchangeinput';
+
+function App() {
+  // Initialize the custom hook to manage form state and validation //
+
+  const { values, errors, handleChange, resetForm, setErrors } = OnChangeInput(
+    {
+      fname: "",
+      email: "",
+    },
+    validationRules
+  );
 
   // Function to handle form submission
-
   const submitData = (e) => {
     e.preventDefault();
     const emptyFields = getEmptyFields(values);
-
     if (emptyFields.length > 0) {
       // If there are empty fields, set errors for each empty field
       emptyFields.forEach(field => {
         setErrors((prev) => ({ ...prev, [field]: `${field} is required` }));
       });
     } else {
-  
       console.log("All values filled:", values);
       // Add further logic for data submission or API calls here
     }
   };
-
 
   return (
     <div className="App">
@@ -88,7 +86,6 @@ function App() {
      
       {errors.fname && <span className="error">{errors.fname}</span>}
 
-      
       <input
         type="text"
         name="email"
@@ -98,13 +95,36 @@ function App() {
       />
       
       {errors.email && <span className="error">{errors.email}</span>}
-
       <button onClick={submitData}>Submit</button>
     </div>
   );
 }
-
 export default App;
  ```
 
+
+
+## Installation
+
+Install onchangeinput use npm
+
+```bash
+  npm install onchangeinput
+  
+```
+
+## Authors
+
+- [@Pankajkumar34](https://github.com/Pankajkumar34/onchange_input)
+
+
+## 🚀 About Me
+I'm a Mern stack developer...
+
+## Other Common Github Profile Sections
+👩‍💻 I'm currently working on...
+
+👯‍♀️ I'm looking to collaborate on...
+
+💬 Ask me about...
 
