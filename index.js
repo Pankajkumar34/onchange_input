@@ -19,31 +19,31 @@ const OnChangeInput = (initialState, validationRules = {}) => {
    * @param {Event} e - The event object triggered by input change.
    */
 
-    
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    if (validationRules[name]) {
-      const { pattern, maxLength, errorMessage } = validationRules[name];
-      // Check for pattern validation
-      if (pattern && value.length > 0 && !pattern.test(value)) {
-        setErrors((prev)=>({...errors,[name]:errorMessage || "Invalid format"}))
-      } else {
-        setErrors((prev)=>({...errors,[name]:""}))
-        
-      }
-
-      // Check for maxLength validation
-      if (maxLength && value.length > maxLength) {
-        setErrors((prev)=>({...errors,[name]: `Exceeds maximum length of ${maxLength} characters`}))
-        
-      } else {
-        setErrors((prev)=>({...errors,[name]:""}))
-      }
-    }
-    setValues({ ...values, [name]: value });
-  };
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+      
+        if (validationRules[name]) {
+          const { pattern, maxLength, errorMessage } = validationRules[name];
+          let validationError = "";
+      
+          // Check for pattern validation
+          if (pattern && value.length > 0 && !pattern.test(value)) {
+            validationError = errorMessage;
+          }
+      
+          // Check for maxLength validation
+          if (maxLength && value.length > maxLength) {
+            validationError = `Exceeds maximum length of ${maxLength} characters`;
+          }
+      
+          // Update errors state
+          setErrors((prev) => ({ ...prev, [name]: validationError }));
+        }
+      
+        // Update values state
+        setValues((prev) => ({ ...prev, [name]: value }));
+      };
+      
 
 
 /**
