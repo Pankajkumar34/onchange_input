@@ -1,5 +1,13 @@
-# On chnage input hook
-onchangeinput is a custom React hook designed to handle form input changes and validation efficiently. It provides a simple interface to manage form state, validate inputs, and display error messages.
+# OnChangeInput Hook
+
+`onchangeinput` is a custom React hook designed to handle form input changes and validation efficiently. It provides a simple interface to manage form state, validate inputs, and display error messages.
+
+## Installation
+
+To install `onchangeinput`, use npm:
+
+```bash
+npm i onchangeinput
 
 
 

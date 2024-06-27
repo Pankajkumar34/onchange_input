@@ -8,12 +8,23 @@
     "test": "npm run test"
   },
   "keywords": [
-    "npm"
+    "react",
+    "form",
+    "input",
+    "validation",
+    "custom-hook",
+    "react-hook",
+    "form-validation",
+    "onchangeinput"
   ],
   "author": "Pankaj Kumar",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pankajkumar34/onchange_input.git"
   }
 }
