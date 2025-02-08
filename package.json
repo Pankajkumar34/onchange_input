@@ -1,7 +1,7 @@
 {
   "name": "onchangeinput",
   "version": "2.0.3",
-  "description": "Onchange Input",
+  "description": "onchangeinput is a custom React hook designed to handle form input changes and validation efficiently. It provides a simple interface to manage form state, validate inputs, and display error messages.",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -19,7 +19,7 @@
   ],
   "author": "Pankaj Kumar",
   "license": "ISC",
-  "dependencies": {},
+    "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.3.3"
   },
